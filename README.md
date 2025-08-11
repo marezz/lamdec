@@ -100,6 +100,6 @@ lamdec/
 
 ## Observações Importantes
 
-- Caso o frontend faça chamadas à API do backend, certifique-se de configurar corretamente o endereço do backend (ex: variáveis de ambiente ou arquivos de configuração).
+- Caso o frontend faça chamadas à API do backend, certifique-se de configurar corretamente o endereço do backend (ex: variáveis de ambiente ou arquivos de configuração) e de recarregar a página algumas vezes.
 
 ---
