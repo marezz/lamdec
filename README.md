@@ -1,6 +1,6 @@
 # Desafio Lamdec
 
-Essa dashboard é uma aplicação web que integra um backend em Python (FastAPI) e um frontend em TypeScript (React). Este guia explica como rodar o projeto por completo e detalha os passos e dependências necessárias.
+Essa dashboard é uma aplicação web que integra um backend em Python (FastAPI) e um frontend em TypeScript (React). Este guia explica como rodar o projeto por completo e detalha os passos e dependências.
 
 ---
 
@@ -34,13 +34,12 @@ cd backend
 pip install -r requirements.txt
 ```
 
-Inicie o servidor FastAPI com Uvicorn:
+Inicie o servidor FastAPI rodando o arquivo main.py:
 
 ```bash
-uvicorn main:app --reload
+cd backend
+python main.py
 ```
-
-> **Dica:** Certifique-se de que o arquivo principal é o `main.py` e o objeto FastAPI é chamado `app`. Caso sejam diferentes, ajuste o comando conforme necessário.
 
 O backend estará disponível, por padrão, em `http://localhost:8000`.
 
@@ -64,7 +63,7 @@ npm install
 Este projeto utiliza as seguintes bibliotecas extras:
 
 - Radix UI:  
-  `@radix-ui/react-dialog`, `@radix-ui/react-hover-card`, `@radix-ui/react-label`, `@radix-ui/react-scroll-area`, `@radix-ui/react-select`, `@radix-ui/react-separator`, `@radix-ui/react-slot`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-tooltip`
+  `@radix-ui/react-dialog`, `@radix-ui/react-hover-card`, `@radix-ui/react-label`, `@radix-ui/react-scroll-area`, `@radix-ui/react-select`, `@radix-ui/react-separator`, `@radix-ui/react-slot`, ...
 - Tailwind e utilitários:  
   `@tailwindcss/vite`, `tailwindcss`, `tailwind-merge`, `class-variance-authority`, `clsx`, `tw-animate-css`
 - Ícones e gráficos:  
@@ -100,6 +99,6 @@ lamdec/
 
 ## Observações Importantes
 
-- Caso o frontend faça chamadas à API do backend, certifique-se de configurar corretamente o endereço do backend (ex: variáveis de ambiente ou arquivos de configuração) e de recarregar a página algumas vezes.
+- Caso o frontend faça chamadas à API do backend, certifique-se de configurar corretamente o endereço do backend (ex: variáveis de ambiente ou arquivos de configuração) e de recarregar a página após alterações.
 
 ---
