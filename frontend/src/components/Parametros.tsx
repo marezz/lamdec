@@ -31,7 +31,7 @@ type Props = {
 type FormState = {
   numCDA?: string;
   score?: number;
-  scoreType?: "min" | "max";
+  score_type?: "min" | "max";
   referencia?: "idade" | "saldo";
   ordem?: "asc" | "desc";
   situacao?: number;
@@ -92,9 +92,9 @@ export default function Parametros({ onDataFetched }: Props) {
         />
         <ToggleGroup
           type="single"
-          value={form.scoreType}
+          value={form.score_type}
           onValueChange={(v) =>
-            updateForm("scoreType", v as FormState["scoreType"])
+            updateForm("score_type", v as FormState["score_type"])
           }
         >
           <ToggleGroupItem value="min" aria-label="Mínimo">

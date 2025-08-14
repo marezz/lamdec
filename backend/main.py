@@ -14,14 +14,6 @@ class ItemCDA(BaseModel):
     agrupamento_situacao: int
     natureza: str
 
-class QueryCDA(BaseModel):
-    numCDA: str | None = None
-    score: float | None = None
-    valor_saldo_atualizado: float | None = None
-    qtde_anos_idade_cda: int | None = None
-    agrupamento_situacao: int | None = None
-    natureza: str | None = None
-
 dir = os.path.dirname(__file__)
 app = FastAPI(debug=True, title="Lamdec")
 caminho = os.path.join(dir,'data','cdas.json')
@@ -70,7 +62,7 @@ def buscar_cdas(
     if score is not None:
         if score_type =="max":
             resultados = [cda for cda in resultados if cda["score"] <= score]
-        if score_type =="min":
+        elif score_type =="min":
             resultados = [cda for cda in resultados if cda["score"] >= score]
 
     if situacao is not None:
